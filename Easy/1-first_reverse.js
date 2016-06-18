@@ -17,4 +17,17 @@ var rev = function(str) {
 	console.log(revStr);
 	return revStr;
 }
-rev("mark")
+rev("mark is a great guy, you should hire him!")
+
+
+// OR
+
+var rev = function(str) {
+	var revStr = "";
+	for(var i = str.length - 1; i >= 0; i--){
+	revStr = revStr + str.charAt(i);
+	}
+	console.log(revStr);
+	return revStr;
+}
+rev("mark is a great guy, you should hire him!")
