@@ -7,3 +7,11 @@
 //
 // Input:"one 22 three"
 // Output:3
+
+
+var wordCount = function(str) {
+	var strArr = str.split(" ");
+	return strArr.length;
+}
+
+wordCount("take me out to the ball game")
