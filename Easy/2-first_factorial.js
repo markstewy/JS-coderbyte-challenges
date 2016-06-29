@@ -9,11 +9,11 @@
 // Output:40320
 
 var factorial = function(num) {
-	var prod = 1;
-	for(var i = num; i > 0; i--) {
-		prod = prod * i;
-	}
-	return prod
+    var prod = 1;
+    for (var i = num; i > 0; i--) {
+        prod = prod * i;
+    }
+    return prod
 }
 
 factorial(4);

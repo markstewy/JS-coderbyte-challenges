@@ -8,15 +8,33 @@
 // Input:"i ran there"
 // Output:"I Ran There"
 
+//WITH LODASH
+var letterCapitalize = function(str) {
+	var strArr = str.split(" ");
+
+	for (var i = 0; i < strArr.length; i++) {
+		  strArr[i] = _.capitalize(strArr[i]);
+	}
+    console.log(strArr.join(" "));
+	//return strArr.join(" ");
+  };
+
+letterCapitalize("i ran there");
+
+
+
+
+// OR
 var letterCapitalize = function(str) {
 	var strArr = str.split("");
 	strArr[0] = strArr[0].toUpperCase();
+
 	for (var i = 0; i < strArr.length; i++) {
 		if(strArr[i] === " ") {
 			strArr[i+1] = strArr[i+1].toUpperCase();
 		}
-	}//end for loop
+	}
 	return strArr.join("");
-}//end function
+};
 
 letterCapitalize("i ran there")

@@ -9,3 +9,41 @@
 //
 // Input:"1:23am-1:08am"
 // Output:1425
+
+
+
+
+//NOT COMPLETE
+//
+// var time = function (str) {
+//
+// 	var strArr = str.split("-");
+// 	var regex = /[p]/;
+// //	var regex2 = /^\d+$/;
+// 	var pm = [false, false];
+//
+// 	//idenfifying am and pm
+// 	for(var i=0; i < strArr.length; i++ ) {
+// 		if(regex.test(strArr[i])) {
+// 			pm[i] = true;
+// 			}
+// 	}
+//
+//
+//
+// 	var start = strArr[0].split("")
+// 	start.pop(); start.pop();
+// 	start = start.toString();
+// 	var end = strArr[1].split("")
+// 	end.pop(); end.pop()
+//
+//
+//
+// console.log(pm)
+// console.log(start)
+// console.log(end)
+//
+//
+// }
+//
+// time("1:23am-11:08pm")

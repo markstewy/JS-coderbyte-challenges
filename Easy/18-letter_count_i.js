@@ -9,3 +9,45 @@
 //
 // Input:"No words"
 // Output:-1
+
+
+var letterCount = function(str) {
+
+    var strArrWords = []
+    var counter = 0;
+    var high = 0;
+    var position;
+    var strArr = str.toLowerCase().split(" "); //create array of words
+
+
+    for (var i = 0; i < strArr.length; i++) {
+        strArrWords.push(strArr[i].split("").sort()); //create array of letters (alphabetized) wthin each word in array
+    }
+
+    for (var j = 0; j < strArrWords.length; j++) { // loop through every word in word array
+        word = strArrWords[j];
+        counter = 0; //reset counter to zero for next word (don't reset high)
+        // console.log(word.length)
+        for (var k = 0; k < word.length; k++) { //loop through every letter in each word
+            if (word[k + 1] === word[k]) { //user letter counter and assign highest / track position of highest
+                counter++
+                if (counter > high) {
+                    high = counter;
+                    position = j;
+                    // console.log("high =" + high + " position =" + position)
+                }
+            }
+            // console.log(word[k] + " word " + j + " letter " + k)
+        }
+
+    }
+
+    // console.log(strArr[position])
+    // console.log(strArrWords)
+    // console.log(strArrWords[0])
+
+
+    return strArr[position]
+}
+
+letterCount("a bb ccccc dddd")

@@ -10,19 +10,19 @@
 // Output:"love"
 
 
-var longestWord = function (str) {
+var longestWord = function(str) {
 
-var word = str.replace(/[^A-Za-z\s]/g, "").split(" ")
-console.log(word.length)
-var letterCount = 0;
-var longest;
-	for (var i = 0; i < word.length; i++) {
-		if(word[i].length > letterCount) {
-			letterCount = word[i].length;
-			longest = word[i];
-		}
-	}
-return longest;
+    var strScrub = str.replace(/[^A-Za-z\s]/g, "").split(" ")
+        //console.log(word.length)
+    var letterCount = 0;
+    var longest;
+    for (var i = 0; i < strScrub.length; i++) {
+        if (strScrub[i].length > letterCount) {
+            letterCount = strScrub[i].length;
+            longest = strScrub[i];
+        }
+    }
+    return longest;
 }
 
-longestWord ("the warriors# will win game 7 !!!!")
+longestWord("lebr#on will win game 7 !!!!")
