@@ -9,3 +9,40 @@
 //
 // Input:4, 4, 4, 6, 2
 // Output:1
+
+
+var meanMode = function(arr) {
+    var sum = 0;
+    var mean;
+    var counter = 0;
+    var high = 0;
+    var highPosition;
+    var mode;
+    arr = arr.sort();
+
+    //calc mean
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    mean = sum / arr.length;
+
+    // calc mode **doesn't yet account for multiple modes**
+    for (var j = 1; j < arr.length; j++) {
+        if (arr[j] === arr[j - 1]) {
+            counter++;
+            if (counter > high) {
+                high = counter;
+                highPosition = j;
+            }
+        }
+    }
+
+    if (arr[highPosition] === mean) {
+        return 1;
+    } else {
+        return 0;
+    }
+
+}
+
+meanMode([1, 3, 3, 3, 5])

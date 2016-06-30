@@ -7,3 +7,17 @@
 //
 // Input:56730
 // Output:567-30
+
+
+var dashInsert = function(str) {
+    var strArr = str.split("");
+
+    for (var i = strArr.length - 1; i > -1; i--) {
+        if (strArr[i - 1] % 2 !== 0 && strArr[i] % 2 !== 0 && i !== 0) {
+            strArr.splice(i, 0, "-")
+        }
+    }
+    return strArr.join("")
+}
+
+dashInsert("1100211134554112")
