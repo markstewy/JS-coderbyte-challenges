@@ -9,3 +9,30 @@
 //
 // Input:19
 // Output:2
+
+
+
+//As the input num grows in size you have to deal with scientific notation and auto rounding that may eliminate digits
+//To avoid any errors, enter all numbers as a string. The function below will also work with number inputs, but does not
+//account for any rounding or scientific notation
+
+var additivePersistence = function(num) {
+    var numArr = num.toString().split("");
+    var counter = 0;
+
+    do {
+        var total = 0;
+        for (var i = 0; i < numArr.length; i++) {
+            total = total + Number(numArr[i]);
+        }
+        console.log(total)
+        numArr = total.toString().split("");
+		counter++;
+
+    }
+    while (total > 9);
+    return counter;
+}
+
+// additivePersistence(9994123419)
+additivePersistence("9994123419")
