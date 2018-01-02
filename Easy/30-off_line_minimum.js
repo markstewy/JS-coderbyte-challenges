@@ -6,7 +6,7 @@
 //with integers separated by commas. For example: if strArr is ["5","4","6","E","1","7","E","E","3","2"] then your program
 //should return 4,1,5.
 // Sample Test Cases
-// Input:"1","2","E","E","3"
+// Input:"1","2","E","E","3" 
 // Output:"1,2"
 //
 // Input:"4","E","1","E","2","E","3","E"
@@ -14,5 +14,13 @@
 
 
 function OffLineMinimum(strArr) {
+    for (var i = strArr.length; i > 0; i--) {
+        if (strArr[i] === "E") {
+            
+        }
+    }
     
 }
+
+
+
