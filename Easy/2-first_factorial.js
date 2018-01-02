@@ -8,6 +8,7 @@
 // Input:8
 // Output:40320
 
+
 var factorial = function(num) {
     var prod = 1;
     for (var i = num; i > 0; i--) {

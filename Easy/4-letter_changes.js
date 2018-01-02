@@ -27,6 +27,8 @@ var change = function(str) {
                 changedArr.push(strArr[i]);
             }
         } //end for loop
+
+
         return changedArr.join("");
     } //end function
 

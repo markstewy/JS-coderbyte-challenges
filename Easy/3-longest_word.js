@@ -11,9 +11,7 @@
 
 
 var longestWord = function(str) {
-
     var strScrub = str.replace(/[^A-Za-z\s]/g, "").split(" ")
-        //console.log(word.length)
     var letterCount = 0;
     var longest;
     for (var i = 0; i < strScrub.length; i++) {
