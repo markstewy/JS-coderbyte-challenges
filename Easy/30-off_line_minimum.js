@@ -16,12 +16,14 @@
 function OffLineMinimum(strArr) {
     let currentSet = [];
     let results = [];
-    for (val in strArr) {
+    for (val of strArr) {
         if (val !== "E") {
             currentSet.push(val);
             currentSet.sort();
         } else if (val === "E") {
-            results.push(currentSet.unshift());
+            if (currentSet.length > 0) {
+              results.push(currentSet.shift());  
+            }
         }
     }
     return results;
