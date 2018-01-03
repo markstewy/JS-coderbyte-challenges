@@ -14,20 +14,17 @@
 
 
 function OffLineMinimum(strArr) {
-    let result = [];
-    for (let i = 0; i < strArr.length; i++) {
-        if (strArr[i] === "E") {
-            let subArr = strArr.slice(0, i);
-            let minVal = Math.min.apply(null, subArr);
-            result.push(minVal);
-            strArr.splice(strArr.indexOf(minVal),1,99)
-            strArr.splice(i,1,99)
-            console.log(minVal)
-            // console.log(strArr.indexOf(minVal))
-            // console.log(strArr)
+    let currentSet = [];
+    let results = [];
+    for (val in strArr) {
+        if (val !== "E") {
+            currentSet.push(val);
+            currentSet.sort();
+        } else if (val === "E") {
+            results.push(currentSet.unshift());
         }
     }
-    return result;
+    return results;
 };
 
 OffLineMinimum(["5","4","6","E","1","7","E","E","3","2"])
