@@ -16,6 +16,22 @@
 #array.filter
 
 #array.reduce
+        Superincreasing = (arr) => {
+            superArr = true;
+                arr.reduce((total, currVal, currIndex, numArr) => {
+                console.log(total)
+                console.log(currVal)
+                    if(currVal > total) {
+                        return (total + currVal); //if you want to add to total through interations total += currVal won't work, simply return a value from the iteration and it will be assigned to the total for you
+                    } else {
+                        superArr = false; //you can't skip a loop or return out of a reduce loop ie. return false; wouldn't work (this is a weakness for performance on long arrays that could be cut short if superArr is deternmined false early on, but reduce has to finish the entire array loop)
+                    }
+                })
+                return superArr;
+        }
+
+
+Superincreasing([1, 3, 6, 13, 54, 1000] )
 
 #fn.apply(obj)
         example:
