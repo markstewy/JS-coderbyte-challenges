@@ -10,3 +10,14 @@
 //
 // Input:"(0 0)","(1 0)","(1 1)","(0 1)"
 // Output:1
+
+
+let RectangleArea = (strArr) => {
+  let cleanArr = strArr.map((set) => {
+    return set.substring(1, set.length-1).split(' ');
+  }).sort()
+  return Math.abs((cleanArr[1][0] - cleanArr[2][0]) * (cleanArr[1][1] - cleanArr[2][1]));
+}
+
+
+RectangleArea(["(3 1)","(3 5)", "(1 1)","(1 5)"]);
