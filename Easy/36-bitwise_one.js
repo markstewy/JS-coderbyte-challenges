@@ -10,3 +10,18 @@
 //
 // Input:"00011", "01010"
 // Output:"01011"
+
+
+let BitwiseOne = (strArr) => {
+  let arr1 = strArr[0].split('');
+  let arr2 = strArr[1].split('');
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    console.log(arr1[i])
+    result.push(Math.max(arr1[i], arr2[i]))
+  }
+  return result.join('').toString();
+}
+
+
+BitwiseOne(["00000011", "01100010"])
