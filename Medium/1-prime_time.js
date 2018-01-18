@@ -6,3 +6,14 @@
 //
 // Input:110
 // Output:false
+
+
+let PrimeTime = (num) => {
+  let prime = true;
+  for (let i = num - 1; i > 1; i--) {
+    if (Number.isInteger(num/i)) { prime = false}
+  }
+  return prime;
+}
+
+PrimeTime(829)
