@@ -6,3 +6,8 @@
 //
 // Input:100
 // Output:541
+
+
+let  PrimeMover = (num) => {
+  
+}

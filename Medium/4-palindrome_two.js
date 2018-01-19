@@ -6,3 +6,18 @@
 //
 // Input:"A war at Tarawa!"
 // Output:"true"
+
+
+let PalindromeTwo = (str) => {
+  let strArr = str.split('')
+  let palindrome = true
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] !== strArr[strArr.length - 1 - i]) {
+      palindrome = false
+      return palindrome
+    }
+  }
+  return palindrome
+}
+
+PalindromeTwo('asdfghjklkjhgfdsa')
