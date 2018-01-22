@@ -6,3 +6,13 @@
 //
 // Input:36 & num2 = 54
 // Output:18
+
+let Division = (num1,num2) => {
+  for (let i = Math.min(num1, num2); i > 0; i--) {
+    if (num1 % i === 0 && num2 % i === 0) {
+      return i
+    }
+  }
+}
+
+Division(100,32)
