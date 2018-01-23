@@ -9,7 +9,6 @@
 // Input:"h3llko" & str2 = "hello"
 // Output:"false"
 
-
 let StringScramble = (str1,str2) => {
     let str1Arr = str1.split('')
     let str2Arr = str2.split('')
