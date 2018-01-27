@@ -6,3 +6,8 @@
 //
 // Input:3,5,-1,8,12
 // Output:"true"
+
+
+let ArrayAddition = (arr) => {
+  
+}

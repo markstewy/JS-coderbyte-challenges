@@ -6,3 +6,22 @@
 //
 // Input:"h3llko" & str2 = "hello"
 // Output:"false"
+
+
+
+let StringScramble = (str1,str2) => {
+  let str1Arr = str1.split('')
+  let str2Arr = str2.split('')
+  
+  for (let i = 0; i < str2Arr.length; i++) {
+      if (str1Arr.indexOf(str2Arr[i]) < 0) {
+          return false
+      } else {
+        console.log(str1Arr)
+        str1Arr.splice(str1Arr.indexOf(str2Arr[i]), 1)
+      }
+  }
+  return true 
+}
+
+StringScramble('coderdsss', 'codesss')
