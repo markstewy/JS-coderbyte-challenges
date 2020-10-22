@@ -10,33 +10,19 @@
 // Output:"true"
 
 
-var palindrome = function(str) {
-    strArr = str.split("");
-    strArrScrub = [];
-    strPalindrome = [];
-    var checker = true;
-
-    for (var i = 0; i < strArr.length; i++) {
-        if (/[a-zA-Z]/.test(strArr[i])) {
-            strArrScrub.push((strArr[i].toLowerCase()));
-        }
+function Palindrome(str) {
+  let str1 = [];
+  str1 = str.split("");
+  for (let i = 0; i < str.length; i++) {
+    if (str1[i] == " ") {
+      str1.splice(i, 1);
     }
-   // console.log(strArrScrub);
-   //console.log(strArrScrub.length-1);
-
-    for (var x = strArrScrub.length - 1; x >= 0; x--) {
-
-   //	console.log(strArrScrub[x])
-   //	console.log(strArrScrub[strArrScrub.length - (x+1)])
-
-        if (strArrScrub[x] !== strArrScrub[strArrScrub.length - 1 - x]) {
-            checker = false;
-            return checker;
-        }
-    }
-    return checker;
+  }
+  if (str1.join("") == str1.reverse().join("")) {
+    return true;
+  }
+  return false;
 }
-
-palindrome("rar")
+console.log(Palindrome(str));
 
 //**need to think of a better way to solve this**
