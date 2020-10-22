@@ -8,17 +8,9 @@
 // Input:"coderbyte"
 // Output:3
 
-
-var vowelCounter = function(str) {
-    counter = 0;
-    strArr = str.split("");
-
-    for (var i = 0; i < strArr.length; i++) {
-        if (/[aAeEiIoOuU]/.test(strArr[i])) {
-            counter++;
-        }
-    }
-    return counter;
+const VowelCount = (str) => {
+    var patt = /[aeiouAEIOU]/g;
+    var vowl_count = str.match(patt);
+    return vowl_count.length;
 }
-
-vowelCounter("aeiouezz")
+console.log(VowelCount(str));
