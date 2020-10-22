@@ -10,23 +10,11 @@
 // Input:"Laura sobs"
 // Output:"true"
 
-
-        var abCheck = function(str) {
-            var checker = false;
-            var strArr = str.split("");
-
-            for (var i = 0; i < strArr.length; i++) {
-                if (/[aA]/.test(strArr[i]) && /[bB]/.test(strArr[i + 4])) {
-                    checker = true;
-                    return checker;
-                } else if (/[aA]/.test(strArr[i]) && /[bB]/.test(strArr[i - 4])) {
-                    checker = true;
-                    return checker;
-                }
-
-            }
-            return checker;
-        }
-
-
-        abCheck("B123a1234b")
+  const AB = (str) => {
+      var patt1 = /a...b/;
+      if (str.match(patt1)) {
+          return true;
+      }
+      return false;
+  }
+  console.log(AB(str));
