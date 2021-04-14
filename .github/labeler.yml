@@ -1,3 +1,5 @@
+version: 1
+labels:
 - label: "S"
   size-below: 10
 - label: "M"
@@ -5,3 +7,7 @@
   size-below: 100
 - label: "L"
   size-above: 100
+  - label: "WIP"
+  title: "^WIP:.*"
+- label: "WIP"
+  mergeable: false
