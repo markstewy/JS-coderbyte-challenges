@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: labeler@master
+    - uses: actions/labeler@master
       env:
         GITHUB_TOKEN: "${{ secrets.ACTIONS_TOKEN }}"
