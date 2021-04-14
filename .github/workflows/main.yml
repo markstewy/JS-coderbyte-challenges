@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: srvaroa/labeler@master
       env:
-        GITHUB_TOKEN: "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"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
