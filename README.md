@@ -19,8 +19,5 @@ hih
 ih
 ih
 ih
-ih
-ih
-hi
 h
 i
