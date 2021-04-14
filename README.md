@@ -16,4 +16,3 @@ https://coderbyte.com/challenges/#medChals
 7
 8
 9
-10
