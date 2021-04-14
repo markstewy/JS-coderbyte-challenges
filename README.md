@@ -9,10 +9,10 @@ https://coderbyte.com/challenges/#medChals
 
 1
 2
-3
-4
-5
-6
-7
-8
+3asdfads
+8s
+s
+s
+s
+s
 9
